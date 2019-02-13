@@ -1,6 +1,6 @@
 <div style="margin:80px;">
-<app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 
-<app-recipes></app-recipes>
-<app-shopping-list></app-shopping-list>
+<app-recipes *ngIf="loadedFeature=='recipe'"></app-recipes>
+<app-shopping-list *ngIf="loadedFeature!='recipe'"></app-shopping-list>
 </div>
